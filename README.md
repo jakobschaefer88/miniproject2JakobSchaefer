@@ -16,26 +16,17 @@ This project will be using Pandas dataframes. This isn't intended to be full blo
 ```
 pip install -r requirements.txt
 ```
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+Download csv from https://www.kaggle.com/datasets/thedevastator/nascar-champions-season-history-1949-present
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
+python main.py
 ```
 
-## Help
+### Output
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+This should create 5 graphs of misc. Nascar data, specifically how different statistics championship winners had. 
 
 ## Authors
 
