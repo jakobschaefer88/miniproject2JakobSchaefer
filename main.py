@@ -32,4 +32,12 @@ driver.plot.scatter(x="Year", y="Car Number", alpha=0.1)
 plt.title('NASCAR Champion Car Number per Year')
 plt.show()
 
-#Graph 3 -
+#Graph 3 - Number of Championships per Driver
+championship_count = driver["Driver"].value_counts().head(10)
+championship_count.plot()
+plt.xticks(ticks=range(len(championship_count)), labels=championship_count.index, rotation=45, fontsize=10)
+plt.xlabel('Driver')
+plt.ylabel('Championship Wins')
+plt.title('NASCAR Driver Championships')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
