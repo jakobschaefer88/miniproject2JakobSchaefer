@@ -13,12 +13,10 @@ By signing this statement, I acknowledge my commitment to upholding the principl
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
 
 driver = pd.read_csv("NASCAR Champion History Dataset.csv", index_col=0)
-#print(driver["Wins"].describe())
 
-#print(driver.head())
+
 
 #Graph 1 - Champion Wins per year
 plt.plot(driver["Year"], driver["Wins"])
@@ -32,14 +30,12 @@ driver.plot.scatter(x="Year", y="Car Number", alpha=0.1)
 plt.title('NASCAR Champion Car Number per Year')
 plt.show()
 
-#Graph 3 - Number of Championships per Driver
-championship_count = driver["Driver"].value_counts().head(10)
-championship_count.plot()
-plt.xticks(ticks=range(len(championship_count)), labels=championship_count.index, rotation=45, fontsize=10)
+#Graph 3 - Top 10 Drivers per Championship wins
+driver_wins = driver["Driver"].value_counts()
+driver_wins.head(10).plot(kind='bar')
+plt.title('Top 10 Drivers per Championship wins')
 plt.xlabel('Driver')
 plt.ylabel('Championship Wins')
-plt.title('NASCAR Driver Championships')
-plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
 
 #Graph 4 - Number of Championships per Car Manufacturer
@@ -48,8 +44,19 @@ manufacturer_count = manufacturer_count.sort_index()
 manufacturer_count.plot(kind='bar')
 plt.xlabel('Manufacturer')
 plt.ylabel('Championship Wins')
-plt.title('NASCAR Manufacturer Championships')
+plt.title('Number of Championships per Car Manufacturer')
 plt.show()
 
-#Graph 5 -
-
+#Graph 5 - Percentage of number of wins in championship season
+def func(pct, allSizes):
+    absolute = pct / 100.*sum(allSizes)
+    if pct > 5:  # Display percentage only if greater than 10%
+        return f"{pct:.1f}%"
+    else:
+        return ""  # Empty string for smaller slices
+driver_wins_season = driver['Wins'].value_counts()
+plt.figure(figsize=(10,10))
+driver_wins_season.plot(kind='pie', autopct=lambda pct: func(pct, allSizes=''), startangle=90,
+                        textprops={'fontsize': 10}, labeldistance=1.05)
+plt.title('Percentage of number of wins in championship season')
+plt.show()
