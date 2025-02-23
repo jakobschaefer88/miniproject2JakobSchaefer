@@ -7,7 +7,7 @@
 
 ## Description
 
-This project will be using Pandas dataframes. This isn't intended to be full blown data science project. The goal here is to come up with some question and then see what API or datasets you can use to get the information needed to answer that question. This will get you familar with working with datasets and asking questions, researching APIs and gathering datasets.
+This project will be using Pandas dataframes. This isn't intended to be full-blown data science project. The goal here is to come up with some question and then see what API or datasets you can use to get the information needed to answer that question. This will get you familiar with working with datasets and asking questions, researching APIs and gathering datasets.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ python main.py
 
 ### Output
 
-This should create 5 graphs of misc. Nascar data, specifically how different statistics championship winners had. 
+This should create 5 graphs of misc. Nascar data, specifically different statistics championship winners had. 
 
 ## Authors
 
@@ -37,8 +37,8 @@ ex. Jakob Schaefer
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
+* [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/04_plotting.html)
+* [YLimit ChatGPT](https://chatgpt.com/share/67bb957d-0cb0-8002-a040-35efba495e40)
+* [PieChart ChatGPT](https://chatgpt.com/share/67bb95b6-ce58-8002-8c6e-16ba9dc88d71)
+* [Top10 ChatGPT](https://chatgpt.com/share/67bb95c9-54cc-8002-b74a-a7ec41920f15)
