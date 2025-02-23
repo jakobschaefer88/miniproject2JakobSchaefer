@@ -41,3 +41,15 @@ plt.ylabel('Championship Wins')
 plt.title('NASCAR Driver Championships')
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
+
+#Graph 4 - Number of Championships per Car Manufacturer
+manufacturer_count = driver["Car Manufacturer"].value_counts()
+manufacturer_count = manufacturer_count.sort_index()
+manufacturer_count.plot(kind='bar')
+plt.xlabel('Manufacturer')
+plt.ylabel('Championship Wins')
+plt.title('NASCAR Manufacturer Championships')
+plt.show()
+
+#Graph 5 -
+
