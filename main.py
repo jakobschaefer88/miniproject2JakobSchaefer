@@ -56,7 +56,7 @@ plt.savefig("charts/number_of_championships_per_car_manufacturer.png")
 
 #Graph 5 - Percentage of number of wins in championship season
 def func(pct, allSizes):
-    absolute = pct / 100.*sum(allSizes)
+    pct / 100.*sum(allSizes)
     if pct > 5:  # Display percentage only if greater than 10%
         return f"{pct:.1f}%"
     else:
