@@ -13,10 +13,15 @@ By signing this statement, I acknowledge my commitment to upholding the principl
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
+os.makedirs("charts", exist_ok=True)
+
+if not os.path.exists("NASCAR Champion History Dataset.csv"):
+    print("Please download the dataset from https://www.kaggle.com/datasets/jakevdp/nascar-championship-data and save it as NASCAR Champion History Dataset.csv")
+    exit()
 
 driver = pd.read_csv("NASCAR Champion History Dataset.csv", index_col=0)
-
-
 
 #Graph 1 - Champion Wins per year
 plt.plot(driver["Year"], driver["Wins"])
