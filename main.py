@@ -23,12 +23,12 @@ plt.plot(driver["Year"], driver["Wins"])
 plt.xlabel('Year')
 plt.ylabel('Wins')
 plt.title('NASCAR Champion Wins per Year')
-plt.show()
+plt.savefig("charts/champion_wins_per_year.png")
 
 #Graph 2 - Champion Car Number per year
 driver.plot.scatter(x="Year", y="Car Number", alpha=0.1)
 plt.title('NASCAR Champion Car Number per Year')
-plt.show()
+plt.savefig("charts/champion_car_number_per_year.png")
 
 #Graph 3 - Top 10 Drivers per Championship wins
 driver_wins = driver["Driver"].value_counts()
@@ -36,7 +36,8 @@ driver_wins.head(10).plot(kind='bar')
 plt.title('Top 10 Drivers per Championship wins')
 plt.xlabel('Driver')
 plt.ylabel('Championship Wins')
-plt.show()
+plt.ylim(0, 15)
+plt.savefig("charts/top_10_drivers_per_championship_wins.png")
 
 #Graph 4 - Number of Championships per Car Manufacturer
 manufacturer_count = driver["Car Manufacturer"].value_counts()
@@ -44,8 +45,9 @@ manufacturer_count = manufacturer_count.sort_index()
 manufacturer_count.plot(kind='bar')
 plt.xlabel('Manufacturer')
 plt.ylabel('Championship Wins')
+plt.ylim(0, 40)
 plt.title('Number of Championships per Car Manufacturer')
-plt.show()
+plt.savefig("charts/number_of_championships_per_car_manufacturer.png")
 
 #Graph 5 - Percentage of number of wins in championship season
 def func(pct, allSizes):
@@ -59,4 +61,4 @@ plt.figure(figsize=(10,10))
 driver_wins_season.plot(kind='pie', autopct=lambda pct: func(pct, allSizes=''), startangle=90,
                         textprops={'fontsize': 10}, labeldistance=1.05)
 plt.title('Percentage of number of wins in championship season')
-plt.show()
+plt.savefig("charts/percentage_of_number_of_wins_in_championship_season.png")
